@@ -1,3 +1,5 @@
+var tablaDiv = document.getElementById("tabla-matriz");
+
 function Matriz(filas, columnas) {
     var matriz = [];
     for (var i = 0; i < filas; i++) {
