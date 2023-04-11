@@ -5,8 +5,11 @@ var auto = {
 }
 
 function mover(m) {
-  if(m == "N"){
+  if(m == "A"){
     auto.posy = auto.posy + 1;
+  }
+  if(m == "D"){
+    auto.dieccion = "E";
   }
   return auto.posx.toString() + ',' + auto.posy.toString() + auto.dieccion
 }
