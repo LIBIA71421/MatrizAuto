@@ -31,4 +31,7 @@ describe("Mover Auto CLASE", () => {
   it("deberia de moverse varios espacios hacia el oeste", () =>{
     expect(auto.mover("AIAA")).toEqual("-2,1O")
   })
+  it("deberia de moverse varios espacios hacia el sur", () =>{
+    expect(auto.mover("ADDAAA")).toEqual("0,-2S")
+  })
 });

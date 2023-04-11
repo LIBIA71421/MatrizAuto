@@ -6,22 +6,28 @@ class Auto{
   }
 
   chooseD(m){
+    let orientacion = ["O","N","E","S"]
     if(m == "A"){
       if(Auto.dieccion == "N"){
-        Auto.posy = Auto.posy + 1;
+        Auto.posy += 1;
+      }
+      else if(Auto.dieccion == "S"){
+        Auto.posy -= 1;
       }
       else if(Auto.dieccion == "E"){
-        Auto.posx = Auto.posx + 1;
+        Auto.posx += 1;
       }
       else if(Auto.dieccion == "O"){
-        Auto.posx = Auto.posx - 1;
+        Auto.posx -= 1;
       }
     }
     if(m == "D"){
-          Auto.dieccion = "E";
+      let cambio = orientacion.indexOf(Auto.dieccion)
+      Auto.dieccion = orientacion[cambio + 1];
     }
     if(m == "I"){
-      Auto.dieccion = "O";
+      let cambio = orientacion.indexOf(Auto.dieccion)
+      Auto.dieccion = orientacion[cambio - 1];
     }
   }
      
