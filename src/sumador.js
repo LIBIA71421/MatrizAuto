@@ -11,6 +11,9 @@ function mover(m) {
   if(m == "D"){
     auto.dieccion = "E";
   }
+  if(m == "I"){
+    auto.dieccion = "O";
+  }
   return auto.posx.toString() + ',' + auto.posy.toString() + auto.dieccion
 }
 
