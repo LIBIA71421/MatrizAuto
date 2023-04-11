@@ -21,4 +21,9 @@ describe("Mover Auto CLASE", () => {
   it("deberia cambiar de direccion a la izquierda", () => {
     expect(auto.mover("I")).toEqual("0,0O");
   });
+
+
+  it("deberia de moverse varios espacios hacia el norte", () =>{
+    expect(auto.mover("AAA")).toEqual("0,3N")
+  })
 });
