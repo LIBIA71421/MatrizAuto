@@ -13,11 +13,10 @@ describe("Mover Auto CLASE", () => {
     expect(auto.mover("A")).toEqual("0,1N");
   });
   
-  //Mover Auto Derecha-ESTE
+  //Mover Auto Derecha-ESTE Isquierda-OESTE
   it("deberia cambiar de direccion a la derecha", () => {
     expect(auto.mover("D")).toEqual("0,0E");
   });
-  //Mover Auto Isquierda-OESTE"
   it("deberia cambiar de direccion a la izquierda", () => {
     expect(auto.mover("I")).toEqual("0,0O");
   });
@@ -28,5 +27,8 @@ describe("Mover Auto CLASE", () => {
   })
   it("deberia de moverse varios espacios hacia el este", () =>{
     expect(auto.mover("ADAA")).toEqual("2,1E")
+  })
+  it("deberia de moverse varios espacios hacia el oeste", () =>{
+    expect(auto.mover("AIAA")).toEqual("-2,1O")
   })
 });

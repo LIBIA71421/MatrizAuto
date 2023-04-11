@@ -10,8 +10,11 @@ class Auto{
       if(Auto.dieccion == "N"){
         Auto.posy = Auto.posy + 1;
       }
-      else{
+      else if(Auto.dieccion == "E"){
         Auto.posx = Auto.posx + 1;
+      }
+      else if(Auto.dieccion == "O"){
+        Auto.posx = Auto.posx - 1;
       }
     }
     if(m == "D"){
