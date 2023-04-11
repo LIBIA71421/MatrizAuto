@@ -5,28 +5,34 @@ class Auto{
     Auto.posy = 0; 
   }
 
+  Guia(orientacion){
+    if(orientacion == "N"){
+      Auto.posy += 1;
+    }
+    else if(orientacion == "S"){
+      Auto.posy -= 1;
+    }
+    else if(orientacion == "E"){
+      Auto.posx += 1;
+    }
+    else if(orientacion == "O"){
+      Auto.posx -= 1;
+    }
+  }
+
   chooseD(m){
     let orientacion = ["O","N","E","S"]
     if(m == "A"){
-      if(Auto.dieccion == "N"){
-        Auto.posy += 1;
-      }
-      else if(Auto.dieccion == "S"){
-        Auto.posy -= 1;
-      }
-      else if(Auto.dieccion == "E"){
-        Auto.posx += 1;
-      }
-      else if(Auto.dieccion == "O"){
-        Auto.posx -= 1;
-      }
+      this.Guia(Auto.dieccion)
     }
     if(m == "D"){
       let cambio = orientacion.indexOf(Auto.dieccion)
+      if(cambio == 3){ cambio = -1; }
       Auto.dieccion = orientacion[cambio + 1];
     }
     if(m == "I"){
       let cambio = orientacion.indexOf(Auto.dieccion)
+      if(cambio == 0){ cambio = 4; }
       Auto.dieccion = orientacion[cambio - 1];
     }
   }
