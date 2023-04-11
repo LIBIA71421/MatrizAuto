@@ -1,26 +1,24 @@
-import mover from "./sumador.js";
+import Auto from "./sumador.js";
 
-describe("Mover Auto", () => {
+let auto
+describe("Mover Auto CLASE", () => {
+  beforeEach(() => {
+    auto = new Auto();
+  })
   it("deberia mostrar la posicion inicial 0,0N", () => {
-    expect(mover()).toEqual("0,0N");
+    expect(auto.mover("")).toEqual("0,0N");
   });
-});
 
-describe("Mover Auto Norte", () => {
   it("deberia moverse hacia el norte", () => {
-    expect(mover("A")).toEqual("0,1N");
+    expect(auto.mover("A")).toEqual("0,1N");
   });
-});
-
-
-
-describe("Mover Auto Derecha-ESTE", () => {
+  
+  //Mover Auto Derecha-ESTE
   it("deberia cambiar de direccion a la derecha", () => {
-    expect(mover("D")).toEqual("0,1E");
+    expect(auto.mover("D")).toEqual("0,0E");
   });
-});
-describe("Mover Auto Isquierda-OESTE", () => {
+  //Mover Auto Isquierda-OESTE"
   it("deberia cambiar de direccion a la izquierda", () => {
-    expect(mover("I")).toEqual("0,1O");
+    expect(auto.mover("I")).toEqual("0,0O");
   });
 });

@@ -1,20 +1,26 @@
-var auto = {
-  dieccion: "N",
-  posx: 0,
-  posy: 0
+class Auto{
+  constructor(){
+    Auto.dieccion = "N"; 
+    Auto.posx = 0;
+    Auto.posy = 0; 
+  }
+
+  mover(m) {
+    for(let i=0; i < m.length; i++){
+
+      if(m[i] == "A"){
+        Auto.posy = Auto.posy + 1;
+      }
+      if(m[i] == "D"){
+        Auto.dieccion = "E";
+      }
+      if(m[i] == "I"){
+        Auto.dieccion = "O";
+      }
+    }
+    
+    return Auto.posx.toString() + ',' + Auto.posy.toString() + Auto.dieccion
+  }
 }
 
-function mover(m) {
-  if(m == "A"){
-    auto.posy = auto.posy + 1;
-  }
-  if(m == "D"){
-    auto.dieccion = "E";
-  }
-  if(m == "I"){
-    auto.dieccion = "O";
-  }
-  return auto.posx.toString() + ',' + auto.posy.toString() + auto.dieccion
-}
-
-export default mover;
+export default Auto;
