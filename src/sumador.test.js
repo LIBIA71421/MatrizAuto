@@ -5,3 +5,8 @@ describe("Mover Auto", () => {
     expect(mover()).toEqual("0,0N");
   });
 });
+describe("Mover Auto Norte", () => {
+  it("deberia moverse hacia el norte", () => {
+    expect(mover("N")).toEqual("0,1N");
+  });
+});
