@@ -29,12 +29,20 @@ describe("Mover Auto CLASE", () => {
     expect(auto.mover("ADAA")).toEqual("2,1E")
   })
   it("deberia de moverse varios espacios hacia el oeste", () =>{
-    expect(auto.mover("AIAA")).toEqual("-2,1O")
+    expect(auto.mover("ADAAIIAA")).toEqual("0,1O")
   })
   it("deberia de moverse varios espacios hacia el sur", () =>{
-    expect(auto.mover("ADDAAA")).toEqual("0,-2S")
+    expect(auto.mover("AAAAADDAAAA")).toEqual("0,1S")
   })
   it("deberia de moverse varios espacios hacia el sur", () =>{
-    expect(auto.mover("AIIAAAA")).toEqual("0,-3S")
+    expect(auto.mover("AAAAAIIAA")).toEqual("0,3S")
   })
+
+
+  it("deberia de moverse sin salir de los bordes", () => {
+    expect(auto.mover("ADAAAIADADAA")).toEqual("4,0S");
+  });
+  it("deberia de moverse saliendo de los bordes", () => {
+    expect(auto.mover("AIIAAA")).toEqual("FUERA DEL MAPA");
+  });
 });
