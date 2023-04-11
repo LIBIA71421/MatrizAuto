@@ -1,5 +1,5 @@
 {
-  "name": "parcebase",
+  "name": "parcelbase",
   "version": "1.0.0",
   "description": "npm install",
   "default": "index.html",
@@ -29,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/LIBIA71421/MatrizAuto/issues"
   },
-  "homepage": "https://github.com/LIBIA71421/MatrizAuto#readme"
+  "homepage": "https://github.com/LIBIA71421/MatrizAuto#readme",
+  "main": "cypress.config.js"
 }
