@@ -1,21 +1,13 @@
-import Matriz from "./ControlAuto.js";
+import Auto from "./sumador.js";
 
-var tablaDiv = document.getElementById("tabla-matriz");
+let cadena = document.querySelector("#cadena");
+const button = document.querySelector("#addBtn");
+const res = document.querySelector("#resp");
+let auto
 
-form.addEventListener("submit", (event) => {
+button.addEventListener("click", (event) => {
   event.preventDefault();
-  let filas = Number.parseInt(f.value);
-  let columnas = Number.parseInt(c.value);
-  var miMatriz=Matriz(filas,columnas);
-  function Matriz(filas, columnas) {
-    var matriz = [];
-    for (var i = 0; i < filas; i++) {
-      matriz[i] = [];
-      for (var j = 0; j < columnas; j++) {
-
-        matriz[i][j] = "0"; 
-      }
-    }
-    return matriz;
-  }
+  auto = new Auto();
+  let respuesta = auto.mover(cadena.value)
+  res.innerHTML = "<p>" + respuesta + "</p>" 
 });

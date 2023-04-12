@@ -1,9 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+ </head><html>
   <body>
-    <h1>Controlador de Autos</h1>
-    <div id="tabla-matriz"></div>
-    
+
+    <h1 class="d-flex justify-content-center">Controlador de Autos</h1>
+
+    <div id="tabla-matriz" class="d-flex justify-content-center">
+      <label for="cadena" font-size="700">Ingrese una Cadena</label>
+      <input type="string" id="cadena" placeholder="Ejaemplo: ADAAAIADADAA" name="" size="50">
+      <button id="addBtn">Ejecutar</button>
+    </div>
+    <div class="d-flex justify-content-center">
+      <h1 class="fs-2">Resultado</h1>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div id="resp" class="fs-3"></div>  
+    </div>
     <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
-...
