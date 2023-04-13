@@ -6,8 +6,8 @@ class Auto{
   }
 
   Guia(orientacion){
-    if(orientacion == "N"){
-      Auto.posy += 1;
+    if(orientacion == "N" ){
+      Auto.posy += 1;      
     }
     else if(orientacion == "S"){
       Auto.posy -= 1;
@@ -34,6 +34,16 @@ class Auto{
       let cambio = orientacion.indexOf(Auto.dieccion)
       if(cambio == 0){ cambio = 4; }
       Auto.dieccion = orientacion[cambio - 1];
+    }
+    if(m == "J"){
+      let cambio = orientacion.indexOf(Auto.dieccion)
+      if(cambio == 0){ cambio = 4; }
+      Auto.dieccion = orientacion[cambio -2];
+    }
+    if(m == "J"){
+      let cambio = orientacion.indexOf(Auto.dieccion)
+      if(cambio == 3){ cambio = -1; }
+      Auto.dieccion = orientacion[cambio +2];
     }
   }
      

@@ -45,4 +45,10 @@ describe("Mover Auto CLASE", () => {
   it("deberia de moverse saliendo de los bordes", () => {
     expect(auto.mover("AIIAAA")).toEqual("FUERA DEL MAPA");
   });
+
+
+  it("deberia de moverse haciendo un salto", () => {
+    expect(auto.mover("AAA")).toEqual("4,0S");
+  });
+  
 });
